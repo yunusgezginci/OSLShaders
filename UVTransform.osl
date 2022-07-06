@@ -1,0 +1,37 @@
+// UVTransform
+// UVTransform.osl, by Yunus Gezginci
+// Created: 2022-06-07 by Yunus Gezginci for Redshift 3D
+
+shader UVTransform
+[[
+   string label = "UV Transform",
+   string category = "UV Coordinates",
+   string version  = "1.0"
+]]
+(
+    vector UVScale = vector(1.0, 1.0, 0)
+    [[
+        string label = "Scale",
+        float step = 0.1,
+    ]],
+    vector UVOffset = 0.0
+    [[
+        string label = "Offset",
+        float step = 0.1,
+    ]],
+    float UVRotate = 0.0
+    [[
+        string label = "Roate",
+        float step = 0.1,
+    ]],
+
+    output vector Scale = 0,
+    output vector Offset = 0,
+    output float Rotate = 0
+)
+
+{
+    Scale = 1 / UVScale;
+    Offset = UVOffset;
+    Rotate = UVRotate;
+}
