@@ -21,7 +21,7 @@ shader UVTransform
     ]],
     float UVRotate = 0.0
     [[
-        string label = "Roate",
+        string label = "Rotate",
         float step = 0.1,
     ]],
 
